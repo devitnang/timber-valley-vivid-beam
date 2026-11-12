@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Capricorn",
+      "hasCanvas": false,
+      "bodyTextLen": 439,
+      "bodyTextHash": "0d2a2c2b697c6d3cbed28271faf85d98a2e8610f273057c16b953f16ef5a57ce",
+      "bodyTextPrefix": "39 days, 13 hours, and 25 minutes. Until the Sun enters Capricor",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Capricorn",
+      "hasCanvas": false,
+      "bodyTextLen": 439,
+      "bodyTextHash": "9c40712979b165ccf9c55ccafbe118a84a490f4d27d4e9a9e08a6cd5dee8df64",
+      "bodyTextPrefix": "39 days, 13 hours, and 25 minutes. Until the Sun enters Capricor",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

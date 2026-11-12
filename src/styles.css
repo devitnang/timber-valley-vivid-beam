@@ -1,0 +1,219 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #07060b;
+  --color-ivory: #f4efe6;
+  --color-gold: #d4b483;
+  --color-stone: #a89f92;
+  --color-line: #3a342c;
+  --font-display: "Cormorant Garamond", "Iowan Old Style", Palatino, "Times New Roman", serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --radius-card: 0.25rem;
+}
+
+@layer base {
+  html {
+    background: var(--color-ink);
+    color: var(--color-ivory);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: var(--color-ink);
+    color: var(--color-ivory);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  button:not(:disabled) {
+    transition:
+      scale 150ms ease-out,
+      background-color 150ms ease-out,
+      color 150ms ease-out,
+      border-color 150ms ease-out;
+  }
+
+  button:not(:disabled):active {
+    scale: 0.96;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+
+  input {
+    color-scheme: dark;
+  }
+}
+
+.vignette-rise {
+  background: linear-gradient(
+    to top,
+    var(--color-ink) 0%,
+    color-mix(in oklab, var(--color-ink) 42%, transparent) 42%,
+    color-mix(in oklab, var(--color-ink) 18%, transparent) 100%
+  );
+}
+
+.vignette-radial {
+  background: radial-gradient(
+    ellipse at center,
+    transparent 18%,
+    color-mix(in oklab, var(--color-ink) 22%, transparent) 58%,
+    color-mix(in oklab, var(--color-ink) 78%, transparent) 100%
+  );
+}
+
+.grain {
+  opacity: 0.035;
+  background-image: radial-gradient(var(--color-ivory) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.ghost-btn,
+.solid-btn {
+  display: inline-flex;
+  height: 2.75rem;
+  align-items: center;
+  gap: 0.5rem;
+  padding-inline: 1rem;
+  font-size: 0.875rem;
+  line-height: 1;
+}
+
+.ghost-btn {
+  border: 1px solid var(--color-line);
+  background: transparent;
+  color: var(--color-ivory);
+}
+
+.ghost-btn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.solid-btn {
+  border: 1px solid var(--color-gold);
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+.solid-btn:hover {
+  background: var(--color-ivory);
+  border-color: var(--color-ivory);
+}
+
+@keyframes sky-drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.sky-drift {
+  animation: sky-drift 16s ease-in-out infinite;
+}
+
+.twinkle {
+  animation: twinkle 4.8s ease-in-out infinite;
+}
+
+.galaxy-spin {
+  transform-box: view-box;
+  transform-origin: 790px 150px;
+  animation: galaxy-spin 200s linear infinite;
+}
+
+.galaxy-spin-slow {
+  transform-box: view-box;
+  transform-origin: 150px 130px;
+  animation: galaxy-spin 280s linear infinite reverse;
+}
+
+.meteor {
+  offset-rotate: 0deg;
+}
+
+.meteor-a {
+  animation: meteor-a 14s linear infinite;
+}
+
+.meteor-b {
+  animation: meteor-b 19s linear infinite;
+  animation-delay: 6s;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes galaxy-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes meteor-a {
+  0% {
+    transform: translate(80px, 40px) rotate(24deg);
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  16% {
+    transform: translate(420px, 190px) rotate(24deg);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes meteor-b {
+  0% {
+    transform: translate(520px, 20px) rotate(28deg);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.9;
+  }
+  14% {
+    transform: translate(860px, 180px) rotate(28deg);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Capricorn",
+      "hasCanvas": false,
+      "bodyTextLen": 331,
+      "bodyTextHash": "0c2f9e8b2526db5e39e54cd77932aaf9d45c9d24be4cb976f10926a14d88fade",
+      "bodyTextPrefix": "Counting toward Capricorn. SATURN · EARTH · CARDINAL Capricorn T",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Capricorn",
+      "hasCanvas": false,
+      "bodyTextLen": 331,
+      "bodyTextHash": "0c2f9e8b2526db5e39e54cd77932aaf9d45c9d24be4cb976f10926a14d88fade",
+      "bodyTextPrefix": "Counting toward Capricorn. SATURN · EARTH · CARDINAL Capricorn T",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": true,
+  "baselineReasons": [
+    "desktop: body text changed (439 -> 331 chars, hash mismatch)",
+    "mobile: body text changed (439 -> 331 chars, hash mismatch)"
+  ]
+}

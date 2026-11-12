@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      @font-face {
+        font-family: "Cormorant Garamond";
+        src: url("fonts/CormorantGaramond.ttf") format("truetype");
+        font-weight: 300 700;
+        font-style: normal;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background: #07060b;
+      }
+      .stage {
+        position: relative;
+        width: 1200px;
+        height: 630px;
+      }
+      svg.sky {
+        position: absolute;
+        inset: 0;
+        width: 1200px;
+        height: 630px;
+      }
+      .lockup {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+        padding-left: 0.12em;
+        font-family: "Cormorant Garamond", "Liberation Serif", serif;
+        font-weight: 500;
+        font-size: 108px;
+        line-height: 0.86;
+        letter-spacing: 0.12em;
+        color: #f4efe6;
+      }
+      .rule {
+        width: 64px;
+        height: 1px;
+        margin: 26px 0 18px;
+        background: #d4b483;
+      }
+      p {
+        margin: 0;
+        padding-left: 0.42em;
+        font-family: "Cormorant Garamond", "Liberation Serif", serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1;
+        letter-spacing: 0.42em;
+        color: #d4b483;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <svg class="sky" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <radialGradient id="well" cx="50%" cy="48%" r="62%">
+            <stop offset="0%" stop-color="#1a1612" />
+            <stop offset="48%" stop-color="#0d0c0a" />
+            <stop offset="100%" stop-color="#07060b" />
+          </radialGradient>
+          <radialGradient id="vig" cx="50%" cy="50%" r="72%">
+            <stop offset="55%" stop-color="#07060b" stop-opacity="0" />
+            <stop offset="100%" stop-color="#07060b" stop-opacity="0.92" />
+          </radialGradient>
+        </defs>
+        <rect width="1200" height="630" fill="url(#well)" />
+        <!-- faint Saturn crescent, far and high, warm gold -->
+        <g transform="translate(860 128) rotate(-18)" fill="none" stroke="#d4b483" stroke-opacity="0.33" stroke-width="1.25">
+          <ellipse cx="0" cy="0" rx="168" ry="34" />
+          <ellipse cx="0" cy="0" rx="150" ry="26" stroke-opacity="0.18" />
+        </g>
+        <!-- sea-goat constellation: horns, spine, fish tail -->
+        <g fill="none" stroke="#d4b483" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.72">
+          <path d="M156 268 L214 146 L292 92 L386 168 L470 124 L568 156 L690 108 L812 138 L908 196 L992 262 L1072 348" />
+          <path d="M292 92 L248 188" />
+          <path d="M1072 348 L1016 392" />
+          <path d="M1072 348 L1124 318" />
+        </g>
+        <g fill="#d4b483">
+          <circle cx="156" cy="268" r="2.4" />
+          <circle cx="214" cy="146" r="3.1" />
+          <circle cx="292" cy="92" r="2.6" />
+          <circle cx="248" cy="188" r="2.1" />
+          <circle cx="386" cy="168" r="2.8" />
+          <circle cx="470" cy="124" r="3.4" />
+          <circle cx="568" cy="156" r="2.5" />
+          <circle cx="690" cy="108" r="3.2" />
+          <circle cx="812" cy="138" r="2.4" />
+          <circle cx="908" cy="196" r="2.9" />
+          <circle cx="992" cy="262" r="2.3" />
+          <circle cx="1072" cy="348" r="3.3" />
+          <circle cx="1016" cy="392" r="2.2" />
+          <circle cx="1124" cy="318" r="2.5" />
+        </g>
+        <!-- quiet field of warm stars, kept off the lockup -->
+        <g fill="#a89f92">
+          <circle cx="86" cy="78" r="1.2" opacity="0.7" />
+          <circle cx="140" cy="420" r="1.1" opacity="0.45" />
+          <circle cx="210" cy="520" r="1.4" opacity="0.55" />
+          <circle cx="320" cy="64" r="1" opacity="0.5" />
+          <circle cx="480" cy="48" r="1.3" opacity="0.4" />
+          <circle cx="760" cy="52" r="1.1" opacity="0.55" />
+          <circle cx="1040" cy="86" r="1.2" opacity="0.4" />
+          <circle cx="1140" cy="180" r="1" opacity="0.5" />
+          <circle cx="90" cy="560" r="1.3" opacity="0.35" />
+          <circle cx="1120" cy="540" r="1.4" opacity="0.4" />
+          <circle cx="640" cy="560" r="1.1" opacity="0.3" />
+          <circle cx="980" cy="500" r="1.2" opacity="0.45" />
+          <circle cx="420" cy="560" r="0.9" opacity="0.35" />
+          <circle cx="180" cy="80" r="1.6" fill="#d4b483" opacity="0.8" />
+          <circle cx="1088" cy="120" r="1.5" fill="#f4efe6" opacity="0.55" />
+          <circle cx="64" cy="300" r="1.2" fill="#d4b483" opacity="0.45" />
+        </g>
+        <rect width="1200" height="630" fill="url(#vig)" />
+      </svg>
+      <div class="lockup">
+        <h1>CAPRICORN</h1>
+        <div class="rule"></div>
+        <p>THE WINTER GATE</p>
+      </div>
+    </div>
+  </body>
+</html>
